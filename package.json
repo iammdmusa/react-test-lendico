@@ -1,0 +1,80 @@
+{
+  "name": "react-next-boilarplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "commit": "git-cz",
+    "test": "jest",
+    "testwatch": "jest --watchAll",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "next": "9.2.2",
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-backgrounds": "^5.3.14",
+    "@storybook/addon-docs": "^5.3.14",
+    "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-links": "^5.3.14",
+    "@storybook/addon-storyshots": "^5.3.14",
+    "@storybook/addon-viewport": "^5.3.14",
+    "@storybook/addons": "^5.3.14",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.14",
+    "@testing-library/react": "^9.5.0",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "commitizen": "^4.0.3",
+    "cross-env": "^7.0.1",
+    "cypress": "^4.1.0",
+    "cz-conventional-changelog": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-jest": "^23.8.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^4.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.13.0",
+    "standard": "^14.3.1",
+    "tailwindcss": "^1.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "export CI=true && lint-staged && npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.{css,json,md}": ["prettier --write", "git add"],
+    "*.{js,jsx}": ["prettier --write", "standard --fix", "git add"]
+  },
+  "browserslist": {
+    "production": ["last 1 chrome version"],
+    "development": ["last 1 chrome version"]
+  },
+  "standard": {
+    "globals": ["jest", "it", "expect", "test", "describe", "storybook"]
+  }
+}

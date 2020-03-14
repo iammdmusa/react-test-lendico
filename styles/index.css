@@ -1,0 +1,81 @@
+@import './button.css';
+
+/* purgecss start ignore */
+@tailwind base;
+
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.content {
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+.content h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.calculator {
+  padding: 40px;
+}
+.calculator .from {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 15px 0;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+.form-control label {
+  font-size: 20px;
+  padding: 0 20px;
+  line-height: 3rem;
+}
+
+input[type='text'] {
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+  -webkit-transition: width 0.7s ease-in-out;
+  transition: width 0.6s ease-in-out;
+  font-size: 16px;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+input[type='text']:focus,
+input[type='text']:active {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+button {
+  width: auto;
+  padding: 15px 40px;
+  background-color: rgb(20, 167, 208);
+  margin-left: 20px;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.display-installment {
+  padding: 40px;
+  background-color: #f5f5f5;
+}
